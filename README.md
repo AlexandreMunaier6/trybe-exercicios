@@ -1,3 +1,1 @@
-# Meu repositório de exercícios
-Repositório de exercícios da Trybe.
-Aprendendo git clone e pull request.
+O objetivo desse repositório é deixar organizado todo os conteúdos da trybe.
