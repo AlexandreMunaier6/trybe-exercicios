@@ -6,23 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
     <style>
-        h1 {
-            font-size: 65px;
-            color: orange;
-        }
-
-        .backGroundColor {
-            background-color: blue;
-        }
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-family: sans-serif;
+     }
+    p {
+        font-weight: 600;
+        font-size: 3em;
+     }
+    #azul {
+        background-color: blue;
+        font-style: italic;
+    }
+    #preto {
+        background-color: black;
+        color: orange;
+        text-align: center;
+    }
+    #vermelho {
+        background-color: red;
+        line-height: 1cm;
+        text-decoration: underline;
+    }
     </style>
 </head>
 <body>
-    <h1>Frutas</h1>
-    <p class="backGroundColor">Qual é a sua fruta favorita?</p>
-    <ul class="backGroundColor">
-        <li>Maçã</li>
-        <li>Banana</li>
-        <li>Pera</li>
+    <h1>Cores</h1>
+    <p>Qual é a sua cor favorita?</p>
+    <ul>
+        <li id="azul">Azul</li>
+        <li id="preto">Preto</li>
+        <li id="vermelho">Vermelho</li>
     </ul>
     
 </body>
