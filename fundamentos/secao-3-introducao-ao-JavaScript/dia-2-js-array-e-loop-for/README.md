@@ -1,0 +1,1 @@
+Dia 2 da secao 3 de fundamentos.
