@@ -2,6 +2,7 @@ window.onload = () => {
     const setBackgroundColor = (color) => {
       let content = document.querySelector(".content")
       content.style.backgroundColor = color
+      let recoveryBackGroundColor = localStorage.setItem('backGroundColor', color);
     }
   
     const setFontColor = (color) => {
@@ -9,6 +10,7 @@ window.onload = () => {
       for (let index = 0; index < paragraphs.length; index += 1) {
         paragraphs[index].style.color = color
       }
+      let recoveryFontColor = localStorage.setItem('fontColor', color);
     }
   
     const setFontSize = (size) => {
@@ -16,6 +18,7 @@ window.onload = () => {
       for (let index = 0; index < paragraphs.length; index += 1) {
         paragraphs[index].style.fontSize = size
       }
+      let recoveryfontSize = localStorage.setItem('fontSize', size);
     }
   
     const setLineHeight = (height) => {
@@ -23,6 +26,7 @@ window.onload = () => {
       for (let index = 0; index < paragraphs.length; index += 1) {
         paragraphs[index].style.lineHeight = height
       }
+      let recoverylineHeight = localStorage.setItem('lineHeight', height);
     }
   
     const setFontFamily = (family) => {
@@ -30,6 +34,7 @@ window.onload = () => {
       for (let index = 0; index < paragraphs.length; index += 1) {
         paragraphs[index].style.fontFamily = family
       }
+      let recoveryFontFamily = localStorage.setItem('fontFamily', family);
     }
   
     // Cor de fundo da tela;
@@ -71,4 +76,36 @@ window.onload = () => {
         setFontFamily(event.target.innerHTML)
       })
     }
+    const initialize = () => {
+        let backgroundColor = localStorage.getItem('backGroundColor');
+        if (backgroundColor) {
+            setBackgroundColor(backgroundColor);
+        }
+       
+        let fontColor = localStorage.getItem("fontColor");
+        if (fontColor) {
+            setFontColor(fontColor);
+        }
+
+        let fontSize = localStorage.getItem("fontSize");
+        if (fontSize) {
+            setFontSize(fontSize);
+        }
+    
+        let lineHeight = localStorage.getItem("lineHeight");
+        if (lineHeight) {
+            setLineHeight(lineHeight);
+        }
+    
+        let fontFamily = localStorage.getItem("fontFamily");
+        if (fontFamily) {
+            setFontFamily(fontFamily);
+        }
+        
+      }
+    
+    initialize()
   }
+
+
+  
