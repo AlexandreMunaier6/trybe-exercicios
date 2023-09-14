@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        const htmlBody = document.querySelector('body');
+        const newH1 = document.createElement('h1');
+        newH1.innerText = 'TrybeTrip - Agencia de Viagens';
+        newH1.classList = 'title';
+        htmlBody.appendChild(newH1);
+
+        const newMain = document.createElement('main');
+        newMain.classList = 'main-content';
+        newMain.style.backgroundColor = 'green'
+        htmlBody.appendChild(newMain);
+
+        const newSection = document.createElement('section');
+        newSection.classList = 'center-content';
+        newMain.appendChild(newSection);
+
+        const newP = document.createElement('p');
+        newP.innerText = 'Os melhores preços com a maior segurança e conforto é aqui';
+        newSection.appendChild(newP);
+
+        const rightSection = document.createElement('section');
+        rightSection.classList = 'right-content';
+        rightSection.style.marginRight = 'auto';
+        newMain.appendChild(rightSection);
+
+        const leftSection = document.createElement('section');
+        leftSection.classList = 'left-content';
+        newMain.appendChild(leftSection);
+
+        const img = document.createElement('img');
+        img.src = 'https://picsum.photos/200';
+        leftSection.appendChild(img);
+
+        const listaNO = document.createElement('ul');
+        rightSection.appendChild(listaNO);
+        for (let i = 1; i <= 10; i += 1) {
+            let li = document.createElement('li');
+            li.innerText = i;
+            listaNO.appendChild(li);
+        }
+
+        const firsth3 = document.createElement('h3');
+        firsth3.innerText = 'First H3';
+        firsth3.classList = 'description';
+        newMain.appendChild(firsth3);
+
+        const secondh3 = document.createElement('h3');
+        secondh3.innerText = 'Second H3';
+        secondh3.classList = 'description';
+        newMain.appendChild(secondh3);
+
+        const thirdh3 = document.createElement('h3');
+        thirdh3.innerText = 'Third H3';
+        thirdh3.classList = 'description';
+        newMain.appendChild(thirdh3);
+
+        const leftSectionClass = document.querySelector('.left-content');
+        newMain.removeChild(leftSectionClass);
+
+        for (let i = 1; i <= 2; i += 1) {
+            const lastChildUL = document.querySelector('ul').lastChild;
+            listaNO.removeChild(lastChildUL);
+        }
+
+    </script>
+  </body>
+</html>

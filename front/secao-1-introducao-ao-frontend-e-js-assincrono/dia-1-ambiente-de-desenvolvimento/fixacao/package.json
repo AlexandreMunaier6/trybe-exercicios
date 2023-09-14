@@ -1,0 +1,24 @@
+{
+  "name": "secao-1-introducao-ao-frontend-e-js-assincrono",
+  "version": "1.0.0",
+  "description": "Aprendendo FrontEnd",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open",
+    "lint": "eslint ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alexandre",
+  "license": "ISC",
+  "dependencies": {
+    "clipboard-copy": "^4.0.1",
+    "nanoid": "^4.0.2",
+    "vite": "^4.4.9"
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
