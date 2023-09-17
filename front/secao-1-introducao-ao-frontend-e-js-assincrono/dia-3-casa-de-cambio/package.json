@@ -1,0 +1,20 @@
+{
+  "name": "dia-3-casa-de-cambio",
+  "version": "1.0.0",
+  "description": "casa de cambio",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "sweetalert2": "^11.7.28",
+    "vite": "^4.4.9"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0"
+  }
+}
